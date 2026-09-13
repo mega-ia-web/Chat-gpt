@@ -1,0 +1,42 @@
+ai_chat_system/
+├── app.py                    # Point d'entrée principal (FastAPI)
+├── config/
+│   ├── __init__.py
+│   └── settings.py           # Configuration globale
+├── core/
+│   ├── __init__.py
+│   ├── tokenizer.py          # Tokenization / détokenization
+│   ├── embedding.py          # Génération d'embeddings
+│   └── inference.py          # Moteur d'inférence
+├── models/
+│   ├── __init__.py
+│   ├── transformer.py        # Architecture Transformer
+│   ├── attention.py          # Mécanisme d'attention
+│   └── llm_engine.py         # Moteur LLM complet
+├── api/
+│   ├── __init__.py
+│   ├── routes.py             # Endpoints REST
+│   ├── websocket.py          # Communication temps réel
+│   └── middleware.py         # Auth, CORS, rate limiting
+├── services/
+│   ├── __init__.py
+│   ├── chat_service.py       # Logique métier du chat
+│   ├── memory_service.py     # Gestion de la mémoire conversation
+│   └── rag_service.py        # Retrieval-Augmented Generation
+├── storage/
+│   ├── __init__.py
+│   ├── vector_store.py       # Base de données vectorielle
+│   ├── conversation_db.py    # Historique des conversations
+│   └── cache.py              # Système de cache LRU
+├── utils/
+│   ├── __init__.py
+│   ├── security.py           # Sécurité et filtrage
+│   ├── validators.py         # Validation des entrées
+│   └── helpers.py            # Utilitaires divers
+├── tests/
+│   ├── test_inference.py
+│   ├── test_api.py
+│   └── test_tokenizer.py
+├── requirements.txt
+├── Dockerfile
+└── docker-compose.yml
